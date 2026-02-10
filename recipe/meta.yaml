@@ -12,18 +12,19 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
     - python >=3.8
-    - setuptools >=30.3.0
+    - setuptools >=30.3.0,<82
     - setuptools-scm
   run:
     - python >=3.8
     - xarray >=0.16
-    - numpy >=1.20
+    - numpy >=1.21
+    - setuptools >=30.3.0,<82
 
 test:
   imports:
